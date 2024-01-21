@@ -23,3 +23,23 @@
     //console.log("Hello World!!!")
 //}
 //myFunction()
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+//// MEMORY ////
+//Stack(Primitive), Heap(Non-Primitive)//
+//let nameOne="Ram"
+//let nameTwo=nameOne
+//nameTwo="Bindal"
+//console.log(nameOne);
+//console.log(nameTwo);
+
+let userOne={
+    userEmail:"ram@gmail.com",
+    upi:"user@ybl"
+}
+console.log(userOne);
+let userTwo=userOne
+userOne.userEmail="rambindal@gmail.com"
+console.log(userOne);
+console.log(userTwo);
