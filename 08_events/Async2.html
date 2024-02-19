@@ -8,23 +8,24 @@
 </head>
 
 <body>
-    <h1>Coding</h1>
-    <button id="stop">Stop</button>
+    <h1>Javascript Coding</h1>
+    <h3></h3>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
 </body>
 <script>
-    const sayRam = function () {
-        console.log("Ram");
-    }
-    setTimeout(sayRam, 2000)
-
     const changeText = function () {
-        document.querySelector('h1').innerHTML = "Best Javascript Series"
+        console.log("Ram", Date.now());
     }
-    const changeMe = setTimeout(changeText, 3000)
-
-    document.querySelector('#stop').addEventListener('click', function () {
-        clearTimeout(changeMe)
-
+    let intervalId;
+    const startInterval = function () {
+        intervalId = setInterval(changeText, 1000)
+    }
+    const stop = document.querySelector('#Start').addEventListener('click', function () {
+        startInterval()
+    })
+    document.querySelector('#Stop').addEventListener('click', function () {
+        clearInterval(intervalId)
     })
 </script>
 
